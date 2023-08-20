@@ -1,0 +1,11 @@
+.header-modal {
+    padding-bottom: 70px;
+    margin-left: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: -45px;
+    height: 95px;
+    box-shadow: 2px 1px 8px #888888;
+    display: flex;
+    justify-content: space-between;
+  }

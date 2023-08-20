@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
+import Login from '../src/login/Index';
+import Landingpage from '../src/landingpage/Index';
+import BonSementara from '../src/bonSementara/Index';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navigate to="/login" replace />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/landing-page" element={<Landingpage />}></Route>
+        <Route path="/dashboard" element={<BonSementara />}></Route>
+      </Routes>
+
+    </BrowserRouter>
   );
 }
 
